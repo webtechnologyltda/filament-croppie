@@ -1,6 +1,11 @@
 # Filament Croppie - Documentation
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/michaeld555/filament-croppie.svg?style=flat-square)](https://packagist.org/packages/michaeld555/filament-croppie)
+[![Total Downloads](https://img.shields.io/packagist/dt/michaeld555/filament-croppie.svg?style=flat-square)](https://packagist.org/packages/michaeld555/filament-croppie)
+
 This package provides an image cropping component for FilamentPHP, using the Croppie.js library. It allows users to interactively crop images before uploading, offering flexible configuration options to control the crop size, aspect ratio, and format.
+
+<img src="./art/croppie-banner.png" alt="filament croppie" width="1920" height="auto" class="filament-hidden" style="width: 100%;" />
 
 ## Installation
 
@@ -76,6 +81,8 @@ Croppie::make('user_avatar')
     ->modalDescription('Please upload a square image for optimal results.');
 ```
 
+![Screenshot of basic croppie](./art/croppie-basic.png)
+
 #### Square Crop with Custom Viewport Size and Zoom Disabled
 
 ```php
@@ -86,6 +93,8 @@ Croppie::make('product_image')
     ->enableZoom(false)
     ->imageFormat('webp');
 ```
+
+![Screenshot of basic croppie](./art/croppie-square.png)
 
 ### Croppie Component Methods
 
