@@ -5,7 +5,7 @@
 
 This package provides an image cropping component for FilamentPHP, using the Croppie.js library. It allows users to interactively crop images before uploading, offering flexible configuration options to control the crop size, aspect ratio, and format.
 
-<img src="./art/croppie-banner.png" alt="filament croppie" width="1920" height="auto" class="filament-hidden" style="width: 100%;" />
+<img src="./art/filament-croppie.png" alt="filament croppie" width="1920" height="auto" class="filament-hidden" style="width: 100%;" />
 
 ## Installation
 
