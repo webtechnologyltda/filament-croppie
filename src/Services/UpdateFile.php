@@ -19,7 +19,7 @@ class UpdateFile extends Component
     }
 
     #[On('upload-croppied-image')]
-    public function uploadImageFile(string $disk, string $base64Image, string $statePath, string $imageName = 'croppied-image', string $imageType = 'png'): void
+    public function uploadImageFile(string $disk, string $base64Image, string $statePath, string $imageName = 'croppied-image', string $imageType = 'png', string|null $directory = null): void
     {
 
         if($statePath !== $this->statePath) return;
@@ -28,7 +28,15 @@ class UpdateFile extends Component
 
         $imageContent = base64_decode($base64Image);
 
-        $filename = $imageName . '.' . $imageType;
+        if(!is_null($directory)) {
+            $directory = $directory . '/';
+        }
+
+        if(is_null($directory)) {
+            $directory = '';
+        }
+
+        $filename = $directory . $imageName . '.' . $imageType;
 
         $data = Storage::disk($disk)->put($filename, $imageContent);
 
