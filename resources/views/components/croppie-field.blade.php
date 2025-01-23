@@ -93,7 +93,7 @@
                         circle: {{ $forceCircleResult ? 'true' : 'false' }},
                     }).then((resp) => {
 
-                        $dispatch('upload-croppied-image', {disk: '{{ $getDiskName() }}', base64Image: resp, statePath: '{{ md5($getStatePath()) }}', imageName: this.imageName, imageType: '{{ $imageFormat }}', directory: '{{ $getDirectory() }}'});
+                        $dispatch('upload-croppied-image', {disk: '{{ $getDiskName() }}', base64Image: resp, statePath: '{{ md5($getStatePath()) }}', imageName: this.imageName, imageType: '{{ $imageFormat }}', directory: '{{ $getDirectory() }}', shouldPreserveFilenames: {{ $shouldPreserveFilenames() ? 'true' : 'false' }} });
 
                     });
 

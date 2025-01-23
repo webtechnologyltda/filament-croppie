@@ -19,7 +19,7 @@ class UpdateFile extends Component
     }
 
     #[On('upload-croppied-image')]
-    public function uploadImageFile(string $disk, string $base64Image, string $statePath, string $imageName = 'croppied-image', string $imageType = 'png', string|null $directory = null): void
+    public function uploadImageFile(string $disk, string $base64Image, string $statePath, string $imageName = 'croppied-image', string $imageType = 'png', string|null $directory = null, bool $shouldPreserveFilenames = false): void
     {
 
         if($statePath !== $this->statePath) return;
@@ -34,6 +34,10 @@ class UpdateFile extends Component
 
         if(is_null($directory)) {
             $directory = '';
+        }
+
+        if(!$shouldPreserveFilenames){
+            $imageName = $imageName . '-' . Str::uuid()->toString();
         }
 
         $filename = $directory . $imageName . '.' . $imageType;
