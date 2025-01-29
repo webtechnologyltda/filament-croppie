@@ -1,7 +1,7 @@
 # Filament Croppie - Documentation
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/michaeld555/filament-croppie.svg?style=flat-square)](https://packagist.org/packages/michaeld555/filament-croppie)
-[![Total Downloads](https://img.shields.io/packagist/dt/michaeld555/filament-croppie.svg?style=flat-square)](https://packagist.org/packages/michaeld555/filament-croppie)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/webtechnologyltda/filament-croppie.svg?style=flat-square)](https://packagist.org/packages/webtechnologyltda/filament-croppie)
+[![Total Downloads](https://img.shields.io/packagist/dt/webtechnologyltda/filament-croppie.svg?style=flat-square)](https://packagist.org/packages/webtechnologyltda/filament-croppie)
 
 This package provides an image cropping component for FilamentPHP, using the Croppie.js library. It allows users to interactively crop images before uploading, offering flexible configuration options to control the crop size, aspect ratio, and format.
 
@@ -10,7 +10,7 @@ This package provides an image cropping component for FilamentPHP, using the Cro
 ## Installation
 
 ```bash
-composer require michaeld555/filament-croppie
+composer require webtechnologyltda/filament-croppie
 ```
 
 After installation, you'll be prompted to publish the configuration file and translations. It's recommended to publish the configuration file to customize the default options.
@@ -125,7 +125,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Credits
 
--   [Michael Douglas](https://github.com/michaeld555)
+-   [Michael Douglas](https://github.com/webtechnologyltda)
 -   [All Contributors](../../contributors)
 
 ## License

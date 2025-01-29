@@ -1,9 +1,9 @@
 {
-    "name": "michaeld555/filament-croppie",
+    "name": "webtechnologyltda/filament-croppie",
     "description": "Croppie Js Implementation Field for Filament forms",
     "keywords": [
         "filament",
-        "michaeld555",
+        "webtechnologyltda",
         "field",
         "image",
         "croppie",
@@ -13,7 +13,7 @@
         "image-resize",
         "croppie-image-resize"
     ],
-    "homepage": "https://github.com/michaeld555/filament-croppie",
+    "homepage": "https://github.com/webtechnologyltda/filament-croppie",
     "license": "MIT",
     "authors": [
         {
@@ -25,7 +25,7 @@
     "require": {
         "php": "^8.1",
         "filament/filament": "^3.2",
-        "filament/forms": "^3.0",
+        "filament/forms": "^3.2",
         "illuminate/contracts": "^10.0|^11.0",
         "league/commonmark": "^2.4",
         "spatie/laravel-package-tools": "^1.15.0"

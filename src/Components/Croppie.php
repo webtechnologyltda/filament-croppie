@@ -50,6 +50,7 @@ class Croppie extends FileUpload
     protected string | Closure | null $imageFormat = 'png';
 
     protected string | Closure | null $imageSize = 'viewport';
+    protected float | Closure | null $imageQuality = 1;
 
     protected string | Closure | null $imageName = 'croppied-image';
 
@@ -367,6 +368,18 @@ class Croppie extends FileUpload
     public function getImageSize(): ?string
     {
         return $this->evaluate($this->imageSize);
+    }
+
+    public function imageQuality(float | Closure $imageQuality) : static
+    {
+        $this->imageQuality = $imageQuality;
+
+        return $this;
+    }
+
+    public function getImageQuality(): float
+    {
+        return $this->evaluate($this->imageQuality);
     }
 
     public function imageName(string | Closure | null $imageName) : static

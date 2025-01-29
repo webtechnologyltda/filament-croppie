@@ -25,7 +25,7 @@
         $imageName = $getImageName();
     @endphp
 
-    <div x-load-css="[@js(\Filament\Support\Facades\FilamentAsset::getStyleHref('filament-croppie', package: 'michaeld555/filament-croppie'))]" x-load-js="[@js(\Filament\Support\Facades\FilamentAsset::getScriptSrc('filament-croppie', package: 'michaeld555/filament-croppie'))]">
+    <div x-load-css="[@js(\Filament\Support\Facades\FilamentAsset::getStyleHref('filament-croppie', package: 'webtechnologyltda/filament-croppie'))]" x-load-js="[@js(\Filament\Support\Facades\FilamentAsset::getScriptSrc('filament-croppie', package: 'webtechnologyltda/filament-croppie'))]">
 
         <div x-data="{
 
@@ -38,6 +38,8 @@
             init() {
 
                 let setImageName = addEventListener('set-image-name-{{ md5($getStatePath()) }}', (event) => {
+
+                    console.log('setImageName');
 
                     this.imageName = event.detail.imageName;
 
@@ -88,7 +90,11 @@
 
                     this.croppie.result({
                         type: 'base64',
-                        size: '{{ $imageSize }}',
+                        @if( $imageSize == 'original' || $imageSize == 'viewport' )
+                            size: '{{ $imageSize }}',
+                        @else
+                            size: { width: '{{ $imageSize }}', height: '{{ $imageSize }}' },
+                        @endif
                         format: '{{ $imageFormat }}',
                         circle: {{ $forceCircleResult ? 'true' : 'false' }},
                     }).then((resp) => {

@@ -40,7 +40,7 @@ class FilamentCroppieServiceProvider extends PackageServiceProvider
                     }
 
                     if ($command->confirm('Great! Would you like to show some love by starring Filament Croppie on GitHub?', true)) {
-                        exec(PHP_OS_FAMILY === 'Darwin' ? 'open https://github.com/michaeld555/filament-croppie' : (PHP_OS_FAMILY === 'Windows' ? 'start https://github.com/michaeld555/filament-croppie' : (PHP_OS_FAMILY === 'Linux' ? 'xdg-open https://github.com/michaeld555/filament-croppie' : throw new \RuntimeException('Unable to open browser. OS not supported.'))));
+                        exec(PHP_OS_FAMILY === 'Darwin' ? 'open https://github.com/webtechnologyltda/filament-croppie' : (PHP_OS_FAMILY === 'Windows' ? 'start https://github.com/webtechnologyltda/filament-croppie' : (PHP_OS_FAMILY === 'Linux' ? 'xdg-open https://github.com/webtechnologyltda/filament-croppie' : throw new \RuntimeException('Unable to open browser. OS not supported.'))));
                     }
 
                 })
@@ -75,7 +75,7 @@ class FilamentCroppieServiceProvider extends PackageServiceProvider
 
     protected function getAssetPackageName(): string
     {
-        return 'michaeld555/filament-croppie';
+        return 'webtechnologyltda/filament-croppie';
     }
 
 }
